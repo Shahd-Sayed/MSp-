@@ -106,14 +106,17 @@
                     margin-bottom: 12px;
 
                     &:nth-child(1) {
-                        background: var(--purple-accent) !important;
+                        /* background: var(--purple-accent) !important; */
                         font-size: 1rem !important;
                         font-weight: 800 !important;
                         border-radius: var(--third-border-radius) !important;
                         padding: 12px 24px !important;
                         width: fit-content !important;
-                        color: var(--main-bg-nav-color) !important;
-                        box-shadow: inset 0px 0px 10px 7px #3e0e42, 3px 3px 4px 1px #7b1d805c;
+                        /* color: var(--main-bg-nav-color) !important; */
+                        /* box-shadow: inset 0px 0px 10px 7px #3e0e42, 3px 3px 4px 1px rgba(123, 29, 128, 0.3607843137); */
+                        border: 1px solid var;
+                        border: 2px solid var(--purple-accent);
+                        color: var(--purple-accent) !important;
                     }
                 }
 
@@ -539,8 +542,7 @@
 
                 &:hover,
                 &.active {
-                    background-color: var(--main-background-color);
-                }
+                    background: var(--purple-accent);                }
 
 
             }
@@ -615,17 +617,18 @@
 
                         li {
                             font-weight: 500;
-                            &.li{
-                                list-style:disc;
+
+                            &.li {
+                                list-style: disc;
                                 list-style-position: outside;
-                                color: var(--purple-accent)
-                            ;
-                            font-weight: 800;
+                                color: var(--purple-accent);
+                                font-weight: 800;
                             }
                         }
 
                         ol {
-                            padding-left:12px ;
+                            padding-left: 12px;
+
                             li {
                                 list-style-position: inside;
                                 list-style: circle;

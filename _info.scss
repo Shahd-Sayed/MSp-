@@ -34,7 +34,7 @@
     .first .main-all {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 12px;
     }
 
     .first .top p {
@@ -43,14 +43,23 @@
 
     .first .top h1 {
         color: var(--purple-accent);
-        font-size: 55px;
+        font-size: 50px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 
     .first h5 {
         width: fit-content;
-        padding: 12px;
+        // padding: 12px;
         border-radius: 8px;
-        border: 1px solid var(--purple-accent);
+        font-size: 1rem !important;
+        font-weight: 800 !important;
+        border-radius: var(--third-border-radius) !important;
+        padding: 12px 24px !important;
+        /* color: var(--main-bg-nav-color) !important; */
+        /* box-shadow: inset 0px 0px 10px 7px #3e0e42, 3px 3px 4px 1px rgba(123, 29, 128, 0.3607843137); */
+        border: 2px solid var(--purple-accent);
+        color: var(--purple-accent) !important;
     }
 
     .table {
@@ -93,6 +102,9 @@ span {
         text-align: center;
         h2{
             font-size: 2rem;
+            span{
+                color:  var(--purple-accent);
+            }
         }
     }
 

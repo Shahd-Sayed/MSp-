@@ -38,20 +38,28 @@
 #info .first .main-all {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 12px;
 }
 #info .first .top p {
   font-size: 12px;
 }
 #info .first .top h1 {
   color: var(--purple-accent);
-  font-size: 55px;
+  font-size: 50px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 #info .first h5 {
   width: fit-content;
-  padding: 12px;
   border-radius: 8px;
-  border: 1px solid var(--purple-accent);
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  border-radius: var(--third-border-radius) !important;
+  padding: 12px 24px !important;
+  /* color: var(--main-bg-nav-color) !important; */
+  /* box-shadow: inset 0px 0px 10px 7px #3e0e42, 3px 3px 4px 1px rgba(123, 29, 128, 0.3607843137); */
+  border: 2px solid var(--purple-accent);
+  color: var(--purple-accent) !important;
 }
 #info .table {
   display: none;
@@ -84,6 +92,9 @@
 }
 #info .title h2 {
   font-size: 2rem;
+}
+#info .title h2 span {
+  color: var(--purple-accent);
 }
 #info .timeline {
   overflow: hidden;
@@ -2087,12 +2098,8 @@ footer .left a {
 footer .right .links div,
 .loc {
   display: flex;
-  padding-top: 10px;
-  align-items: center;
-}
-
-footer .right .links div a {
   padding-top: 12px;
+  align-items: center;
 }
 
 footer a,
@@ -2124,8 +2131,13 @@ footer h6 {
 
 footer .center {
   padding: 10px 84px 10px 74px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+footer .center .links {
+  text-align: right !important;
 }
 
 footer .center .social {
@@ -2145,19 +2157,39 @@ footer .bottom {
 /* end footer */
 /* extra small screens */
 @media (max-width: 769px) {
-  footer hr {
-    margin-top: 30px;
+  footer .right .links div,
+  .loc {
+    display: flex;
+    padding-top: 15px;
+    align-items: center;
   }
   footer .top {
     flex-direction: column;
     padding: 20px 33px;
     gap: 40px;
   }
+  footer .bottom {
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 0px 10px 24px 10px;
+    padding: opx 10px 10px 10px;
+  }
   footer .center .links {
-    display: flex;
-    flex-direction: column;
     gap: 8px;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  footer .links i {
+    color: var(--purple-accent);
+    border: 2px solid var(--purple-accent);
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px;
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
   }
   footer .right,
   footer .left {
@@ -2168,8 +2200,9 @@ footer .bottom {
   }
   footer .center {
     align-items: center;
-    padding: 10px 34px 10px 34px;
-    gap: 33px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 16px;
+    text-align: center;
   }
   footer .top,
   footer .left {
@@ -2180,10 +2213,6 @@ footer .bottom {
     /* gap: 35px; */
     /* flex-wrap: wrap; */
     gap: 35px;
-  }
-  footer .top a,
-  footer .left a {
-    margin-top: 12px !important;
   }
   .social:first-child::before, .social:first-child::after, .social:nth-child(2)::before, .social:nth-child(2)::after, .social:nth-child(3)::before, .social:nth-child(3)::after, .social:last-child::before, .social:last-child::after {
     display: none !important;
@@ -2537,14 +2566,17 @@ div#cta\ previous {
   margin-bottom: 12px;
 }
 #home .section_one .SectionGrid .col p:nth-child(1) {
-  background: var(--purple-accent) !important;
+  /* background: var(--purple-accent) !important; */
   font-size: 1rem !important;
   font-weight: 800 !important;
   border-radius: var(--third-border-radius) !important;
   padding: 12px 24px !important;
   width: fit-content !important;
-  color: var(--main-bg-nav-color) !important;
-  box-shadow: inset 0px 0px 10px 7px #3e0e42, 3px 3px 4px 1px rgba(123, 29, 128, 0.3607843137);
+  /* color: var(--main-bg-nav-color) !important; */
+  /* box-shadow: inset 0px 0px 10px 7px #3e0e42, 3px 3px 4px 1px rgba(123, 29, 128, 0.3607843137); */
+  border: 1px solid var;
+  border: 2px solid var(--purple-accent);
+  color: var(--purple-accent) !important;
 }
 #home .section_one .SectionGrid .col h2 {
   font-size: 2.4rem !important;
@@ -2887,7 +2919,7 @@ div#cta\ previous {
   height: 25vh;
 }
 #home .section_two .SponserGrid .sectionOne:hover, #home .section_two .SponserGrid .sectionOne.active {
-  background-color: var(--main-background-color);
+  background: var(--purple-accent);
 }
 #home .section_two .questionsGrid {
   display: grid;
